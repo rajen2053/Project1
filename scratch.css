@@ -1,0 +1,23 @@
+.test {
+  border: 1px solid black;
+  width: 500px;
+}
+
+.main {
+  display: inline-block;
+  width: 100px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.sub {
+  border: 1px solid black;
+  list-style: none;
+  width: 50px;
+  display: none;
+  position: absolute;
+}
+
+.main:hover .sub {
+  display: block;
+}
