@@ -79,5 +79,250 @@
   }
 </script>
 
+  <div align="center">
+    <select name="mydropdown">
+      <option value="Milk">Fresh Milk</option>
+      <option value="Cheese">Old Cheese</option>
+      <option value="Bread">Hot Bread</option>
+    </select>
+  </div>
+<title>Handmade with Joy</title>
+
+<style>
+
+
+  .store-pics {
+    display: inline-block;
+  }
+
+  @font-face {
+    font-family: "Italianno";
+    src: url("Italianno-Regular-OTF.otf") format("opentype");
+  }
+
+  body {
+    font-size: 200%;
+    font-family: "Italianno", serif;
+    background-image: url("file:///E:/Grace/Art/Skin%20Care%20Products/background.jpg");
+    color: #FF9ED5;
+  }
+
+  ul#tabs {
+    list-style-type: none;
+    margin: 30px 0 0 0;
+    padding: 0 0 0.3em 0;
+  }
+
+  ul#tabs li {
+    display: inline;
+  }
+
+  ul li ul {
+    padding: 0;
+    position: absolute;
+    display: none;
+    opacity: o;
+    visibility: hidden;
+  }
+
+  ul#tabs li a {
+    color: #FFE8F0;
+    background: rgb(255, 189, 220);
+    border: 1px solid rgb(255,255,255);
+    border-bottom: none;
+    padding: 0.3em;
+    text-decoration: none;
+  }
+
+  ul#tabs li a:hover {
+    background-color: rgb(252, 151, 190);
+  }
+
+  ul#tabs li a.selected {
+    color: rgb(255, 189, 220);
+    background: #FFE8F0;
+    font-weight: bold;
+  }
+
+  div.tabContent.hide {
+    display: none;
+  }
+
+  div {
+    width:80vw;
+    margin: 0 auto;
+  }
+
+  #title {
+    color: #FF9ED5;
+    text-align: center;
+  }
+
+  .about {
+    position: relative;
+  }
+
+  .list {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #about-title {
+    position: absolute;
+    left: 47%;
+    margin-left: -50px;
+    top: 550px;
+    display: block;
+    color: #FF9ED5;
+    text-align: center;
+    z-index: 2;
+  }
+
+  img.border-label {
+    position: absolute;
+    display: block;
+    left: 40%;
+    margin-left: -40px;
+    top: 550px;
+    width: 335px;
+    height: 140px;
+  }
+
+  #natures-gifts {
+    position: absolute;
+    left: 44%;
+    margin-left: -40px;
+    transform: rotate(-16deg);
+    top: 550px;
+  }
+
+</style>
+
+<script>
+  var tabLinks = new Array();
+  var contentDivs = new Array();
+  function init() {
+    var tabListItems = document.getElementById('tabs').childNodes;
+    for ( var i = 0; i < tabListItems.length; i++ ) {
+      if ( tabListItems[i].nodeName == "LI" ) {
+        var tabLink = getFirstChildWithTagName( tabListItems[i], 'A' );
+        var id = getHash( tabLink.getAttribute('href') );
+        tabLinks[id] = tabLink;
+        contentDivs[id] = document.getElementById( id );
+      }
+    }
+
+    var i = 0;
+
+    for (var id in tabLinks) {
+      tabLinks[id].onclick = showTab;
+      tabLinks[id].onfocus = function() { this.blur() };
+      if (i == 0) tabLinks[id].className = 'selected';
+      i++;
+    }
+
+    var i = 0;
+
+    for ( var id in contentDivs ) {
+      if ( i != 0 ) contentDivs[id].className = 'tabContent hide';
+      i++;
+    }
+  }
+
+  function showTab() {
+    var selectedId = getHash( this.getAttribute('href') );
+    for ( var id in contentDivs ) {
+      if ( id == selectedId ) {
+        tabLinks[id].className = 'selected';
+        contentDivs[id].className = 'tabContent';
+      } else {
+        tabLinks[id].className = '';
+        contentDivs[id].className = 'tabContent hide';
+      }
+    }
+    return false;
+  }
+
+  function getFirstChildWithTagName( element, tagName ) {
+
+    for ( var i = 0; i < element.childNodes.length; i++ ) {
+
+      if ( element.childNodes[i].nodeName == tagName )
+        return element.childNodes[i];
+    }
+  }
+
+  function getHash( url ) {
+    var hashPos = url.lastIndexOf ( '#' );
+    return url.substring( hashPos + 1 );
+  }
+
+</script>
+<body onload="init()">
+
+
+<div class = "everything">
+  <Img class = "flourish" src="file:///E:/Grace/Art/Clay/Manga%20Cute%20Bunny/Branches%20Finished.png" height = "100px">
+
+  <div class = "program">
+    <h1 id="title">Handmade with Joy</h1>
+
+
+
+    <div class="list">
+      <ul id="tabs">
+        <li><a href="#about">About</a></li>
+
+        <li><a href="#store">Soap</a></li>
+
+        <ul>
+          <li><a href="#mp">Melt & Pour</a></li>
+
+          <li><a href="#cp">Cold Process</a></li>
+
+          <li><a href="#hp">Hot Process</a></li>
+
+        </ul>
+
+      </ul>
+
+
+
+
+      <div class="tabContent" id="about">
+
+        <IMG class="honey-milk-soap-cover" src="file:///E:/Grace/Art/Skin%20Care%20Products/M&P%20Soap
+        %20Making/End%20Product/Honey%20&%20Milk/DSCN6735%20-%20Copy.JPG" width="550">
+
+        <h2 class = small-tab-titles id="natures-gifts">Nature's Gifts</h2>
+      </div>
+    </div>
+
+
+    <div class="tabContent" id="store">
+
+      <h2>Store</h2>
+
+      <div>
+
+        <div>
+        </div>
+
+      </div>
+
+
+
+      <div class="tabContent" id="reaching-out">
+
+        <h2>Reaching Out</h2>
+        <br>
+        <div>
+
+          <h3>Contacts Form:</h3>
+
+        </div>
+
+      </div>
+</form>
 </body>
 </html>

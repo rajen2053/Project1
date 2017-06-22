@@ -16,5 +16,42 @@
       <div class="TopBtns">Home</div>
       <input type="text" name="search" class="Srchbar" placeholder="Search..">
     </div>
+    <table id="UserHomeFilters">
+      <tr>
+        <td>
+          <select id="EntrSex" onchange="Sex()">
+        <option value="">Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+          </select>
+        </td>
+        <td>
+          <select id="EntrAge" onchange="Age()">
+            <option value="">AgeGroup</option>
+            <option value="65-70">65-70</option>
+            <option value="70-75">70-75</option>
+            <option value="75-80">75-80</option>
+            <option value="80-85">80-85</option>
+            <option value="85-90">85-90</option>
+            <option value="90-95">90-95</option>
+            <option value="95-100">95-100</option>
+          </select>
+        </td><td>
+        <select id="EntrRace" onchange="Race()">
+          <option value="">Race</option>
+          <option value="African American">African American</option>
+          <option value="Caucasian">Caucasian</option>
+          <option value="Asian">Asian</option>
+          <option value="Hispanic/Latino">Hispanic/Latino</option>
+        </select>
+      </td><td>
+        <select id="EntrNSAIDS" onchange="NSAIDS()">
+          <option value="">NSAIDS</option>
+          <option value="1">1.</option>
+          <option value="2">2.</option>
+        </select>
+      </td><td>
+      </tr>
+    </table>
   </body>
 </html>

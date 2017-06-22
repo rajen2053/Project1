@@ -194,3 +194,46 @@ div.LogoutTxt {
   bottom:150px;
   font-family: serif;
 }
+.FrgtPswdEmailBtn{
+  background-color:#0A4C80;
+  height:40px;
+  width:20%;
+  margin: auto;
+  padding:3px;
+  text-align:center;
+  color:White;
+  display:block;
+  border-radius: 5px;
+  alignment:center;
+  font-size:26px;
+  position:relative;
+  bottom:100px;
+
+}
+.FrgtPswdEmailBtn:active{
+  color:#0A4C80;
+  transform: translateY(4px);
+
+}
+#UserHomeFilters {
+  alignment: center;
+  position: relative;
+  top:100px;
+  left:200px;
+}
+#CntctUs{
+  text-align: center;
+  position: relative;
+  top:100px;
+  left:450px;
+  text-decoration: underline;
+
+}
+#AbtUs{
+  text-align: center;
+  position: relative;
+  top:100px;
+  left:450px;
+  text-decoration: underline;
+}
+
